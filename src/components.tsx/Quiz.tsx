@@ -8,63 +8,71 @@ interface Question {
   answer: number;
 }
 
-const questions: Question[] = [
-  {
-    text: "What is the name of the first computer programmer?",
-    options: ["Ada Lovelace", "Grace Hopper", "Alan Turing", "Charles Babbage"],
-    answer: 0,
-  },
-  {
-    text: "What is the most popular programming language in 2023?",
-    options: ["Python", "JavaScript", "Java", "C#"],
-    answer: 1,
-  },
-  {
-    text: "What's an algorithm's favorite dance move?",
-    options: [
-      "The Quick Sort",
-      "The Bubble Sort",
-      "The Merge Sort",
-      "The Binary Search",
-    ],
-    answer: 0,
-  },
-  {
-    text: "Why was the JavaScript developer sad?",
-    options: [
-      "Too many bugs",
-      "Callback issues",
-      "Undefined emotions",
-      "Syntax error in love",
-    ],
-    answer: 1,
-  },
-  {
-    text: "How does a computer apologize?",
-    options: ["Sincerely", "Deeply", "From the bottom of its RAM", "Ctrl + Z"],
-    answer: 2,
-  },
-  {
-    text: "How do you comfort a JavaScript bug?",
-    options: ["Console.log", "Pet it gently", "Ignore it", "Cry"],
-    answer: 2,
-  },
-  {
-    text: "What is the best way to ask someone out on a date?",
-    options: [
-      "By text",
-      "By phone",
-      "By email",
-      "Create a personalized Quiz website for her",
-    ],
-    answer: 3,
-  },
-];
+
 
 const Quiz: React.FC = () => {
   const [score, setScore] = useState<number>(0);
   const [questionIndex, setQuestionIndex] = useState<number>(0);
   const [selectedOption, setSelectedOption] = useState<number | null>(null);
+
+
+  const questions: Question[] = [
+    {
+      text: "Which legendary jazz musician is known for his smooth trumpet sound and cool style?",
+      options: ["Chet Baker", "Miles Davis", "Dizzy Gillespie", "Louis Armstrong"],
+      answer: 0,
+    },
+    {
+      text: "Which poem by Charles Bukowski features a hidden bird inside the poet?",
+      options: ["Bluebird", "The Laughing Heart", "So You Want to Be a Writer", "Dinosauria, We"],
+      answer: 0,
+    },
+    {
+      text: "If you could only listen to one Miles Davis album on a deserted island, which one would keep you sane?",
+      options: ["Kind of Blue", "Bitches Brew", "Sketches of Spain", "Birth of the Cool"],
+      answer: 3,
+    },
+    {
+      text: "If your life were a jazz standard, which one would it be?",
+      options: [
+        "Autumn Leaves",
+        "Take Five",
+        "My Funny Valentine",
+        "All Blues",
+      ],
+      answer: 2,
+    },
+    {
+      text: "What would a paintbrush say if it could talk while you’re painting?",
+      options: ["'You're doing great!'", "'Can you lighten up on the pressure?'", "'Another masterpiece!'", "'Just don't make me paint another sad face, please.'"],
+      answer: 3,
+    },
+    {
+      text: "If you could create a mural anywhere in the world, where would it be?",
+      options: ["A Parisian street", "A Brooklyn jazz club", "A sleepy coastal town", "On the walls of your own café"],
+      answer: 3,
+    },
+    {
+      text: "What’s a painter’s favorite jazz instrument?",
+      options: [
+        "A paintbrush that doubles as a saxophone",
+        "A trumpet that plays only in shades of blue",
+        "A piano that spills paint when you hit the keys",
+        "A palette that hums 'My Funny Valentine'",
+      ],
+      answer: 1,
+    },
+    {
+      text: "How do you tell someone you think they're amazing and super cool?",
+      options: [
+        "Write them a poem",
+        "Compose them a jazz tune",
+        "Invite them to a gallery opening",
+        "Create a personalized Quiz website for her in hopes that she will spare your heart and decide to get to know you",
+      ],
+      answer: 3,
+    },
+  ];
 
   const handleAnswer = (option: number) => {
     console.log("option", option);
@@ -84,13 +92,12 @@ const Quiz: React.FC = () => {
 
   const getCorrectClass = (questionIndex: number, mapIndex: number) => {
     if (selectedOption === mapIndex) {
-      return `${
-        selectedOption !== null
-          ? mapIndex === questions[questionIndex].answer
-            ? "correct"
-            : "incorrect"
-          : ""
-      }
+      return `${selectedOption !== null
+        ? mapIndex === questions[questionIndex].answer
+          ? "correct"
+          : "incorrect"
+        : ""
+        }
       `;
     }
 
@@ -129,3 +136,4 @@ const Quiz: React.FC = () => {
 };
 
 export default Quiz;
+

@@ -17,8 +17,8 @@ const FinalQuestion = ({
       </h1>
       <p>
         {score === amount
-          ? "Congratulations Mariam, you aced the quiz! You are smart, funny, and awesome. Will you go out with me?"
-          : "Sorry Mariam, you didn't pass the quiz. But don't worry, I still like you because I think you are cool. Will you go out with me?"}
+          ? "Congratulations Mariam, you aced the quiz! I knew you would do it. so can we get to know each other? 😅"
+          : "Sorry Mariam, you didn't pass the quiz. But don't worry, you are still cool! so can we get to know each other? 😅"}
       </p>
       <div>
         <button className="answer-container" onClick={() => setShowImage(true)}>
@@ -27,10 +27,6 @@ const FinalQuestion = ({
         <button className="answer-container">YES</button>
       </div>
 
-      <div style={{ marginTop: "20px" }}>
-        P.S sorry I don't have database attached to this web-site, so you can
-        write confirmation in DMs😆
-      </div>
 
       {showImage && (
         <div>
