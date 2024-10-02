@@ -16,15 +16,15 @@ const FinalQuestion = ({
         Your score: {score} / {amount}
       </h1>
       <p>
-        {score === amount
-          ? "Congratulations Mariam, you aced the quiz! I knew you would do it. so can we get to know each other? 😅"
-          : "Sorry Mariam, you didn't pass the quiz. But don't worry, you are still cool! so can we get to know each other? 😅"}
+        {score >= amount / 2
+          ? "Congratulations Alina, you aced the quiz! I knew you would do it. so can we get to know each other? 😅"
+          : "Sorry Alina, you didn't pass the quiz. But don't worry, you are still cool! so can we get to know each other? 😅"}
       </p>
       <div>
         <button className="answer-container" onClick={() => setShowImage(true)}>
           YES
         </button>
-        <button className="answer-container">YES</button>
+        <button className="answer-container" onClick={() => setShowImage(true)}>YES</button>
       </div>
 
 

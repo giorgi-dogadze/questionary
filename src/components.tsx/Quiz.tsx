@@ -18,61 +18,105 @@ const Quiz: React.FC = () => {
 
   const questions: Question[] = [
     {
-      text: "Which legendary jazz musician is known for his smooth trumpet sound and cool style?",
-      options: ["Chet Baker", "Miles Davis", "Dizzy Gillespie", "Louis Armstrong"],
-      answer: 0,
+      text: "Which artist is known for creating massive sculptures that convey deep emotions?",
+      options: ["Michelangelo", "Auguste Rodin", "Gustav Vigeland", "Jeff Koons"],
+      answer: 2,
     },
     {
-      text: "Which poem by Charles Bukowski features a hidden bird inside the poet?",
-      options: ["Bluebird", "The Laughing Heart", "So You Want to Be a Writer", "Dinosauria, We"],
-      answer: 0,
+      text: "When you look at a painting, what's the first thing you notice?",
+      options: ["The colors", "The emotion", "The technique", "How it would look on my wall"],
+      answer: 1,
     },
     {
-      text: "If you could only listen to one Miles Davis album on a deserted island, which one would keep you sane?",
-      options: ["Kind of Blue", "Bitches Brew", "Sketches of Spain", "Birth of the Cool"],
-      answer: 3,
-    },
-    {
-      text: "If your life were a jazz standard, which one would it be?",
+      text: "What's more important in life?",
       options: [
-        "Autumn Leaves",
-        "Take Five",
-        "My Funny Valentine",
-        "All Blues",
+        "Waiting for the perfect moment",
+        "Good Khinkali",
+        "Not waiting for the perfect moment and just diving in",
+        "Ordering takeout before the moment passes",
       ],
       answer: 2,
     },
     {
-      text: "What would a paintbrush say if it could talk while you’re painting?",
-      options: ["'You're doing great!'", "'Can you lighten up on the pressure?'", "'Another masterpiece!'", "'Just don't make me paint another sad face, please.'"],
-      answer: 3,
-    },
-    {
-      text: "If you could create a mural anywhere in the world, where would it be?",
-      options: ["A Parisian street", "A Brooklyn jazz club", "A sleepy coastal town", "On the walls of your own café"],
-      answer: 3,
-    },
-    {
-      text: "What’s a painter’s favorite jazz instrument?",
+      text: "If happiness comes in waves, how would you ride yours?",
       options: [
-        "A paintbrush that doubles as a saxophone",
-        "A trumpet that plays only in shades of blue",
-        "A piano that spills paint when you hit the keys",
-        "A palette that hums 'My Funny Valentine'",
+        "With a surfboard and sunglasses",
+        "Chilling on the beach, waiting for the next one",
+        "Building a sandcastle between waves",
+        "Diving right into the water, no hesitation",
       ],
-      answer: 1,
+      answer: 3,
     },
     {
-      text: "How do you tell someone you think they're amazing and super cool?",
+      text: "What's the best way to make a memory last forever?",
       options: [
-        "Write them a poem",
-        "Compose them a jazz tune",
+        "Take a photo and frame it",
+        "Paint it with dark colors for deep vibes",
+        "Write it down and keep it safe",
+        "Live in the moment so intensely you never forget it",
+      ],
+      answer: 3,
+    },
+    {
+      text: "If you had to create a mural that represented your life, what would it feature?",
+      options: [
+        "A bold splash of colors and random shapes",
+        "A self-portrait surrounded by fruits and veggies",
+        "A clock ticking, but with no numbers",
+        "Something so abstract, people would talk about it for hours",
+      ],
+      answer: 2,
+    },
+    {
+      text: "How can you stop spring from coming?",
+      options: [
+        "Not by cutting all the flowers",
+        "By not crossing dates on the calendar",
+        "By wearing winter clothe in spring",
+      ],
+      answer: 0,
+    },
+    {
+      text: "What’s the best way to seize the moment?",
+      options: [
+        "Capture it in a painting or photo",
+        "Live it without overthinking",
+        "Say 'yes' to new experiences",
+        "All of the above, and then some",
+      ],
+      answer: 3,
+    },
+    {
+      text: "Sometimes you don’t need to ask, just a glance is enough... But what does the glance say?",
+      options: [
+        "I'm hungry, let’s get food",
+        "I have a great idea for a mural",
+        "We should totally do something cool together",
+        "I think you’re really awesome, no words needed",
+      ],
+      answer: 3,
+    },
+    {
+      text: "If time is ticking and memories are fleeting, what should you do right now?",
+      options: [
+        "Take a deep breath and enjoy the moment",
+        "Make the best memories you can—right now!",
+        "Take the moment and make it perfect",
+        "Text that cool person you're thinking about",
+      ],
+      answer: 3,
+    },
+    {
+      text: "How do you tell someone you think that she is amazing and super cool?",
+      options: [
+        "Paint a painting for her",
+        "Cook dinner for her",
         "Invite them to a gallery opening",
         "Create a personalized Quiz website for her in hopes that she will spare your heart and decide to get to know you",
       ],
       answer: 3,
-    },
-  ];
+    }
+  ]
 
   const handleAnswer = (option: number) => {
     console.log("option", option);
